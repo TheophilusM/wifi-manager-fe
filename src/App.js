@@ -18,20 +18,11 @@ import { baseName } from "./constants/base";
 
 // Auth Pages
 const Login = lazy(() => import("./pages/auth/Login"));
-const Authenticated = lazy(() => import("./pages/Authenticated"));
-
-const ChangePassword = lazy(() => import("./pages/auth/ChangePassword"));
-const OTPVerification = lazy(() => import("./pages/auth/OTPVerification"));
-const ForgotPassword = lazy(() => import("./pages/auth/ForgotPassword"));
-const ResetPassword = lazy(() => import("./pages/auth/ResetPassword"));
 const NoRoutes = lazy(() => import("./pages/404/NoRoutes"));
 const NotFound = lazy(() => import("./pages/404/NotFound"));
 
 // Service Pages
-const EcocashAccounts = lazy(() => import("./pages/tabs/EcocashAccounts"));
-const EcocashAccountsDetails = lazy(() =>
-  import("./pages/tabs/EcocashAccountsDetails")
-);
+const Authenticated = lazy(() => import("./pages/tabs/Authenticated"));
 
 function App() {
   return (
@@ -47,22 +38,6 @@ function App() {
                   path={baseName + "/authenticated"}
                   element={<Authenticated />}
                 />
-                <Route
-                  path={baseName + "/change-password"}
-                  element={<ChangePassword />}
-                />
-                <Route
-                  path={baseName + "/otp-verification"}
-                  element={<OTPVerification />}
-                />
-                <Route
-                  path={baseName + "/forgot-password"}
-                  element={<ForgotPassword />}
-                />
-                <Route
-                  path={baseName + "/reset-password"}
-                  element={<ResetPassword />}
-                />
 
                 {/* Authorization */}
                 <Route
@@ -71,14 +46,6 @@ function App() {
                 />
 
                 {/* Core */}
-                <Route
-                  path={baseName + "/ecocash-accounts"}
-                  element={<EcocashAccounts />}
-                />
-                <Route
-                  path={baseName + "/ecocash-accounts/client-details/:id"}
-                  element={<EcocashAccountsDetails />}
-                />
                 {/* Not Found */}
                 <Route path={baseName + "/not-found"} element={<NotFound />} />
                 <Route

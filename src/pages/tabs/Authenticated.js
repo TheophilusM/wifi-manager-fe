@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
-import full_logo from "../assets/full_logo.png";
-import { AuthContext } from "../context/AuthContext";
+import full_logo from "../../assets/full_logo.png";
+import { AuthContext } from "../../context/AuthContext";
 
 function Authenticated() {
   const { loading, setLoading } = useContext(AuthContext);
