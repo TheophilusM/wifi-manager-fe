@@ -17,10 +17,21 @@ function Authenticated() {
   return (
     <div className="main-container-center">
       <div className="box-shadow auth-container">
-        <div className="logo">
+        <div style={{ marginTop: 30 }} className="logo">
           <img width={220} src={full_logo} alt="logo" />
         </div>
-        <p style={{ marginTop: 30 }}>Login Successful</p>
+        <p
+          style={{
+            marginTop: 30,
+            marginBottom: 30,
+            textAlign: "center",
+            fontWeight: 500,
+            fontSize: 30,
+            color: "rgba(0,120,0,0.8",
+          }}
+        >
+          Login Successful
+        </p>
       </div>
     </div>
   );

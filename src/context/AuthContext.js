@@ -29,13 +29,7 @@ export const AuthContextProvider = ({ children }) => {
   const [loadingSubsidiaries, setLoadingSubsidiaries] = useState(false);
   const [loadingDepartments, setLoadingDepartments] = useState(false);
 
-  const paths = [
-    "/login",
-    "/otp-verification",
-    "/forgot-password",
-    "/reset-password",
-    "/unauthorized",
-  ];
+  const paths = ["/login", "/authenticated"];
 
   const handleOpenModal = () => setIdle(true);
 
@@ -74,10 +68,8 @@ export const AuthContextProvider = ({ children }) => {
         }
       );
 
-      if (response?.data?.token) {
-        const decoded = jwt_decode(response.data?.token);
-        console.log(decoded);
-      }
+      const decoded = jwt_decode(response.data?.info);
+      console.log(decoded);
       successToast("Authentication Successful!");
       navigate("/authenticated");
     } catch (e) {
