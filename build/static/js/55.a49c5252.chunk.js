@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwifi_manager_fe=self.webpackChunkwifi_manager_fe||[]).push([[55],{6055:(e,n,a)=>{a.r(n),a.d(n,{default:()=>r});a(7313);var i=a(6417);const r=function(){return(0,i.jsx)("div",{className:"main-container-center",children:"Page Not Found"})}}}]);

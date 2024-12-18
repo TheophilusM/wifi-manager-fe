@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwifi_manager_fe=self.webpackChunkwifi_manager_fe||[]).push([[868],{5868:(e,n,a)=>{a.r(n),a.d(n,{default:()=>r});a(7313);var s=a(6417);const r=function(){return(0,s.jsx)("div",{className:"main-container-center",children:"No user roles assigned"})}}}]);
